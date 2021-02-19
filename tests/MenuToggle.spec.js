@@ -25,6 +25,7 @@ function prepareJSDOM(htmlPath, scriptPath) {
 
     return new Promise((resolve, reject) => {
         dom.window.document.addEventListener('DOMContentLoaded', () => {
+            console.log('*** DOMContentLoaded ***');
             setImmediate(() => {
                 console.log('*** RESOLVING ***');
                 resolve(dom.window.document.body);
